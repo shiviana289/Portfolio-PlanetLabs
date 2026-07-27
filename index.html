@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivi Anand — Geospatial Visualization &amp; Remote Sensing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF9F6;
+    --panel:#FFFFFF;
+    --ink:#181A1E;
+    --slate:#5B6270;
+    --red:#B32133;
+    --red-deep:#7E1723;
+    --hairline:#E4DFD3;
+    --tag-bg:#F1ECE1;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding:72px 0 40px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .prepared-for{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--red-deep);
+    background:var(--tag-bg);
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:2px;
+    margin-bottom:22px;
+  }
+  h1.name{
+    font-size:40px;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  p.role-line{
+    font-size:18px;
+    color:var(--red-deep);
+    font-weight:600;
+    margin:0 0 20px;
+  }
+  p.summary{
+    font-size:16px;
+    color:var(--slate);
+    max-width:600px;
+    margin:0 0 28px;
+  }
+  .contact-row{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--slate);
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 14px;
+  }
+  .contact-row a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--hairline);}
+  .contact-row a:hover{border-bottom-color:var(--red);}
+
+  /* ---------- PROJECTS ---------- */
+  section.projects{padding:52px 0 20px;}
+  .project{
+    padding:44px 0;
+    border-bottom:1px solid var(--hairline);
+  }
+  .project:last-child{border-bottom:none;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--red-deep);
+    margin-bottom:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    display:inline-block;
+    width:16px;
+    height:2px;
+    background:var(--red);
+    margin-right:8px;
+    vertical-align:middle;
+  }
+  h2.project-title{
+    font-size:23px;
+    font-weight:700;
+    margin:0 0 6px;
+    letter-spacing:-0.005em;
+  }
+  p.project-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--slate);
+    margin:0 0 20px;
+  }
+  .project-image{
+    width:100%;
+    border-radius:4px;
+    border:1px solid var(--hairline);
+    margin-bottom:24px;
+    display:block;
+    background:var(--panel);
+  }
+  .image-placeholder{
+    width:100%;
+    min-height:150px;
+    border:1px dashed var(--hairline);
+    border-radius:4px;
+    margin-bottom:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--slate);
+    background:var(--panel);
+    text-align:center;
+    padding:20px;
+  }
+  h3.block-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:20px 0 8px;
+  }
+  p.block-text{
+    margin:0 0 4px;
+    color:var(--ink);
+    font-size:15px;
+  }
+  .tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:8px;
+  }
+  .tool-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    background:var(--tag-bg);
+    color:var(--red-deep);
+    padding:4px 10px;
+    border-radius:2px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:48px 0 80px;
+    color:var(--slate);
+    font-size:14px;
+  }
+  footer a{color:var(--red-deep); text-decoration:none; border-bottom:1px solid var(--hairline);}
+  footer a:hover{border-bottom-color:var(--red);}
+
+  @media (max-width:600px){
+    header.hero{padding:48px 0 32px;}
+    h1.name{font-size:32px;}
+    .project{padding:32px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="prepared-for">Portfolio prepared for Planet — Data Visualization Engineer</div>
+    <h1 class="name">Shivi Anand</h1>
+    <p class="role-line">Geospatial Data Visualization &amp; Remote Sensing</p>
+    <p class="summary">
+      Turning satellite imagery and spatial datasets into visual stories for technical and public audiences —
+      NDVI change detection with PlanetScope and Sentinel-2 imagery, AI-assisted interactive mapping tools, and
+      cartographic storytelling for planners, officials, and researchers. Five projects spanning remote sensing,
+      renewable energy siting, public infrastructure planning, and comparative urban satellite analysis.
+    </p>
+    <div class="contact-row">
+      <span>Los Angeles, CA</span>
+      <a href="mailto:shiviana28@gmail.com">shiviana28@gmail.com</a>
+      <span>(714) 732-8421</span>
+    </div>
+  </header>
+
+  <section class="projects">
+
+    <!-- PROJECT 1: UKRAINE NDVI -->
+    <div class="project">
+      <div class="eyebrow">Remote Sensing · Multispectral Imagery · Conference Presented</div>
+      <h2 class="project-title">Ukraine's Abandoned Farmland Quantified Using Satellite Imagery</h2>
+      <p class="project-meta">Undergraduate Researcher · Conference Presenter · USC Spatial Sciences Institute · Aug 2023 – May 2024</p>
+
+      <img class="project-image" src="images/ukraine-ndvi.png" alt="Ukraine NDVI Analysis"
+        onerror="this.outerHTML='<div class=&quot;image-placeholder&quot;>Add screenshot: images/ukraine-ndvi.png</div>'">
+
+      <h3 class="block-label">Impact</h3>
+      <p class="block-text">
+        Following the 2022 Russian invasion, Ukraine — one of the world's largest grain exporters — faced
+        catastrophic disruption to agricultural production. This research quantified the extent of farmland
+        abandonment using satellite imagery, contributing evidence-based findings to the global conversation on
+        food security. Findings were presented at the 2024 American Association of Geographers Annual Conference
+        and the LA Geospatial Summit — translating raster analysis into a visual narrative for a mixed technical
+        and public audience.
+      </p>
+
+      <h3 class="block-label">Approach</h3>
+      <p class="block-text">
+        Analyzed multispectral PlanetScope SuperDove and Sentinel-2 imagery using NDVI indices to detect and
+        classify changes in agricultural land use before and after conflict. A six-year NDVI time series
+        (2018–2023) was constructed to distinguish conflict-driven abandonment from seasonal variation across a
+        93 square mile study area in Kherson, Ukraine, and rendered as a comparative change map for presentation.
+      </p>
+
+      <h3 class="block-label">Key Tools &amp; Techniques</h3>
+      <div class="tools">
+        <span class="tool-tag">PlanetScope Imagery</span>
+        <span class="tool-tag">Sentinel-2</span>
+        <span class="tool-tag">NDVI Analysis</span>
+        <span class="tool-tag">Raster Change Detection</span>
+        <span class="tool-tag">Time Series Analysis</span>
+        <span class="tool-tag">ArcGIS Pro</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: WINDSITE AI -->
+    <div class="project">
+      <div class="eyebrow">AI-Assisted Geospatial Tooling · Interactive Web Mapping</div>
+      <h2 class="project-title">WindSite AI — Wind Farm Siting Platform, Nebraska</h2>
+      <p class="project-meta">GIS Analyst / Project Lead · DOE Collegiate Wind Competition, 2nd Place Nationally · Dec 2025 – Present</p>
+      <p class="project-meta"><a href="https://wind-site-ai.lovable.app/" target="_blank" rel="noopener">View Live Tool — WindSite AI →</a></p>
+
+      <img class="project-image" src="images/nebraska-wind.png" alt="Nebraska Wind Siting Map"
+        onerror="this.outerHTML='<div class=&quot;image-placeholder&quot;>Add screenshot: images/nebraska-wind.png</div>'">
+
+      <h3 class="block-label">Impact</h3>
+      <p class="block-text">
+        Nebraska has significant untapped wind energy potential, but utility-scale development requires
+        navigating competing land-use constraints across 93 counties. Beyond the underlying suitability model,
+        this project built a public-facing interactive tool that renders scored results as an explorable map
+        rather than a static report — giving developers and reviewers a way to see the data, not just read about it.
+      </p>
+
+      <h3 class="block-label">Approach</h3>
+      <p class="block-text">
+        Built a full-stack geospatial ML platform automating wind farm suitability analysis end-to-end. Ingested
+        five data layers — Global Wind Atlas, HIFLD transmission lines, ESA Sentinel land use/land cover, USGS
+        elevation, and the US Wind Turbine Database — via REST API, trained a Random Forest classifier to weight
+        variable importance across all 93 counties, and rendered scored suitability maps in an interactive web
+        map with Mapbox GL JS. Integrated the Claude API to auto-generate structured, plain-language site briefs
+        directly from model outputs.
+      </p>
+
+      <h3 class="block-label">Key Tools &amp; Techniques</h3>
+      <div class="tools">
+        <span class="tool-tag">Python (scikit-learn, ArcPy)</span>
+        <span class="tool-tag">Mapbox GL JS</span>
+        <span class="tool-tag">Claude API</span>
+        <span class="tool-tag">Random Forest Classification</span>
+        <span class="tool-tag">REST API Integration</span>
+        <span class="tool-tag">ArcGIS Pro / ModelBuilder</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: LA28 -->
+    <div class="project">
+      <div class="eyebrow">Interactive Storytelling · Public-Facing Cartography</div>
+      <h2 class="project-title">Where Will the World Stay? Mapping Visitor Stays for LA28</h2>
+      <p class="project-meta">Project Manager, GIS Analyst &amp; Co-Author · Team of 6 · January 2026</p>
+
+      <img class="project-image" src="images/la28-visitor-stays.png" alt="LA28 Visitor Stays Map"
+        onerror="this.outerHTML='<div class=&quot;image-placeholder&quot;>Add screenshot: images/la28-visitor-stays.png</div>'">
+
+      <h3 class="block-label">Impact</h3>
+      <p class="block-text">
+        With over 15 million visitors expected for the 2028 Los Angeles Olympics, this project addressed a
+        critical planning gap: where will visitors actually stay, and can they reach venues without a car? The
+        analysis produced a scalable, replicable methodology now available to LA28 planners and city officials,
+        delivered as an interactive story map built for a non-technical, public audience.
+      </p>
+
+      <h3 class="block-label">Approach</h3>
+      <p class="block-text">
+        Using Airbnb listing data and simulated LA Metro transit networks, the team identified Airbnb listings
+        within 30-minute transit catchments of each Olympic venue, disaggregated by sport. The methodology
+        combined network analysis and spatial joins, then translated the results into an interactive ArcGIS
+        StoryMap so a reader could explore optimal lodging by venue and event date directly, rather than parse a
+        static report.
+      </p>
+
+      <h3 class="block-label">Key Tools &amp; Techniques</h3>
+      <div class="tools">
+        <span class="tool-tag">ArcGIS Pro</span>
+        <span class="tool-tag">Network Analysis</span>
+        <span class="tool-tag">ArcGIS StoryMaps</span>
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">R</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 4: CHINA/INDIA -->
+    <div class="project">
+      <div class="eyebrow">Comparative Satellite Imagery · Change Detection</div>
+      <h2 class="project-title">China and India's High-Tech Urban Development: Divergent Geospatial Patterns</h2>
+      <p class="project-meta">Summer Research Associate · Under Dr. Jeffrey Sellers, USC Center for International Studies</p>
+
+      <img class="project-image" src="images/china-india-urban.png" alt="China India Urban Development Comparison"
+        onerror="this.outerHTML='<div class=&quot;image-placeholder&quot;>Add screenshot: images/china-india-urban.png</div>'">
+
+      <h3 class="block-label">Impact</h3>
+      <p class="block-text">
+        China and India are the world's two most populous countries, each undergoing rapid urbanization through
+        fundamentally different development models. This comparative research revealed how top-down planned
+        development in Wuhan versus organic growth in Bangalore produces measurably different spatial footprints,
+        rendered as side-by-side satellite comparisons for a policy research audience.
+      </p>
+
+      <h3 class="block-label">Approach</h3>
+      <p class="block-text">
+        Created comparative map layouts of satellite imagery, examining road network and village cluster
+        transformation between 2002 and 2020 across matched village pairs in Wuhan and Bangalore. Analysis
+        highlighted the contrast between China's state-directed grid expansion and India's organic, market-driven
+        peripheral growth through paired before/after visual panels.
+      </p>
+
+      <h3 class="block-label">Key Tools &amp; Techniques</h3>
+      <div class="tools">
+        <span class="tool-tag">Satellite Imagery Analysis</span>
+        <span class="tool-tag">Comparative Spatial Analysis</span>
+        <span class="tool-tag">Change Detection</span>
+        <span class="tool-tag">Trimble Maps</span>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    Shivi Anand &nbsp;·&nbsp; <a href="mailto:shiviana28@gmail.com">shiviana28@gmail.com</a> &nbsp;·&nbsp; (714) 732-8421 &nbsp;·&nbsp; Los Angeles, CA
+  </footer>
+
+</div>
+
+</body>
+</html>
